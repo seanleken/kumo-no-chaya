@@ -1,0 +1,66 @@
+<nav class="site-nav" id="site-nav" aria-label="Main navigation">
+  <div class="site-nav__inner">
+    <a href="/" class="site-nav__logo" aria-label="{{ site.nameJa }} — Home">{{ site.nameJa }}</a>
+
+    <button
+      class="site-nav__toggle"
+      id="nav-toggle"
+      aria-expanded="false"
+      aria-controls="nav-overlay"
+      aria-label="Open menu"
+    >
+      <span class="site-nav__toggle-icon" aria-hidden="true"></span>
+    </button>
+
+    <ul class="site-nav__links" role="list">
+      <li><a href="/" class="site-nav__link" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+      <li><a href="/teas/" class="site-nav__link" {% if page.url == "/teas/" %}aria-current="page"{% endif %}>Our Teas</a></li>
+      <li><a href="/journey/" class="site-nav__link" {% if page.url == "/journey/" %}aria-current="page"{% endif %}>The Journey</a></li>
+      <li><a href="/about/" class="site-nav__link" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="site-nav__overlay" id="nav-overlay" role="dialog" aria-modal="true" aria-label="Navigation menu">
+  <ul class="site-nav__links" role="list">
+    <li><a href="/" class="site-nav__link" {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a></li>
+    <li><a href="/teas/" class="site-nav__link" {% if page.url == "/teas/" %}aria-current="page"{% endif %}>Our Teas</a></li>
+    <li><a href="/journey/" class="site-nav__link" {% if page.url == "/journey/" %}aria-current="page"{% endif %}>The Journey</a></li>
+    <li><a href="/about/" class="site-nav__link" {% if page.url == "/about/" %}aria-current="page"{% endif %}>About</a></li>
+  </ul>
+</div>
+
+<script>
+  (function() {
+    var nav     = document.getElementById('site-nav');
+    var toggle  = document.getElementById('nav-toggle');
+    var overlay = document.getElementById('nav-overlay');
+
+    // Scroll state
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 40) {
+        nav.classList.add('is-scrolled');
+      } else {
+        nav.classList.remove('is-scrolled');
+      }
+    }, { passive: true });
+
+    // Mobile toggle
+    toggle.addEventListener('click', function() {
+      var isOpen = overlay.classList.toggle('is-open');
+      toggle.setAttribute('aria-expanded', isOpen);
+      toggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close overlay on link click
+    overlay.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        overlay.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.setAttribute('aria-label', 'Open menu');
+        document.body.style.overflow = '';
+      });
+    });
+  })();
+</script>

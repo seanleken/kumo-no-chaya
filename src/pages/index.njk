@@ -1,0 +1,58 @@
+---
+layout: base.njk
+title: ""
+description: "A fourth-generation mountain teahouse in Yoshino, Nara. Rare single-origin Japanese teas, handmade seasonal wagashi. No reservations. You climb the mountain path."
+bodyClass: page-home
+permalink: /
+---
+
+{# ---- Hero ---- #}
+<section class="hero" aria-label="Welcome">
+  <div class="hero__content">
+    <span class="hero__name-ja ja" lang="ja">雲の茶屋</span>
+    <span class="hero__name-en">The Cloud Teahouse</span>
+    <p class="hero__tagline">Where the mountain meets the clouds,<br>the water boils.</p>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <span class="hero__scroll-label">Scroll</span>
+    <span class="hero__scroll-line"></span>
+  </div>
+</section>
+
+{# ---- Welcome ---- #}
+<section class="welcome section" aria-labelledby="welcome-heading">
+  <div class="welcome__inner">
+    <p class="welcome__epigraph ja" lang="ja" aria-label="Japanese epigraph: Ichi-go ichi-e — one time, one meeting">一期一会</p>
+    <div class="welcome__text" id="welcome-heading">
+      <p>We have been here since 1891, on the same slope, in the same mist. The teahouse has been repaired many times — after the earthquake, after bad winters — but the path up has never changed. I am Fujiwara Haruki, the fourth person in this family to boil water on this mountain, and I am glad you found us.</p>
+      <p>There is no reservation system. There are no specials, no limited-time offers, no loyalty cards. Come when you can. Climb. We will have tea ready.</p>
+    </div>
+  </div>
+</section>
+
+{# ---- Seasonal Highlight ---- #}
+{% for tea in teas.teas %}
+{% if tea.featured %}
+<section class="seasonal" aria-labelledby="seasonal-heading">
+  <div class="seasonal__inner">
+    <span class="seasonal__label">Now Serving</span>
+    <span class="seasonal__tea-ja ja" lang="ja">{{ tea.nameJa }}</span>
+    <span class="seasonal__tea-en">{{ tea.nameEn }}</span>
+    <span class="seasonal__type">{{ tea.type }}</span>
+    <p class="seasonal__description">{{ tea.description }}</p>
+    <a href="/teas/" class="text-link">View our full seasonal menu &rarr;</a>
+  </div>
+</section>
+{% endif %}
+{% endfor %}
+
+{# ---- Atmosphere ---- #}
+<section class="atmosphere" aria-hidden="false" aria-labelledby="atmosphere-quote">
+  <div class="atmosphere__inner">
+    <blockquote class="atmosphere__quote" id="atmosphere-quote">
+      &ldquo;The bowl is not beautiful because it is perfect.<br>
+      It is beautiful because it has been used.&rdquo;
+      <span class="atmosphere__attribution ja" lang="ja">茶道の心</span>
+    </blockquote>
+  </div>
+</section>

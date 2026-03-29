@@ -1,0 +1,50 @@
+/* ============================================================
+   DESIGN TOKENS — Kumo no Chaya
+   ============================================================ */
+
+:root {
+  /* Color */
+  --color-ink:         #1a1a18;
+  --color-ink-light:   #3d3b36;
+  --color-stone:       #8a8477;
+  --color-fog:         #d4cfc6;
+  --color-paper:       #f0ebe1;
+  --color-paper-warm:  #e8e0d2;
+  --color-matcha:      #6b7c47;
+  --color-matcha-deep: #4a5a2e;
+  --color-rust:        #9c6644;
+  --color-cream:       #faf6ee;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", serif;
+  --font-body:    "Source Serif 4", serif;
+  --font-ja:      "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
+  --font-accent:  "Karla", sans-serif;
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1.0625rem;
+  --text-lg:    1.25rem;
+  --text-xl:    1.75rem;
+  --text-2xl:   2.5rem;
+  --text-hero:  clamp(3rem, 6vw, 5rem);
+
+  --leading-tight:  1.2;
+  --leading-normal: 1.6;
+  --leading-loose:  1.85;
+
+  /* Spacing */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.5rem;
+  --space-lg:  3rem;
+  --space-xl:  5rem;
+  --space-2xl: 8rem;
+  --space-3xl: 12rem;
+
+  /* Layout */
+  --content-width: 680px;
+  --wide-width:    960px;
+  --max-width:     1200px;
+  --gutter:        clamp(1.5rem, 4vw, 3rem);
+}

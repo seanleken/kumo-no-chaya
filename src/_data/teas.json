@@ -1,0 +1,57 @@
+{
+  "season": "Spring",
+  "year": "2026",
+  "seasonJa": "春",
+  "teas": [
+    {
+      "nameJa": "玉露",
+      "nameEn": "Gyokuro",
+      "type": "Shaded Green",
+      "description": "Grown under bamboo shade for three weeks before harvest, this single-field gyokuro from our own garden carries the dense umami of deep-forest earth and first morning light. The liquor runs dark jade, slow and thick. It asks nothing of you except patience.",
+      "wagashiName": "Warabi Mochi",
+      "wagashiDescription": "Bracken starch dusted with roasted kinako — springtime in a mouthful",
+      "priceYen": 1500,
+      "featured": true
+    },
+    {
+      "nameJa": "かぶせ茶",
+      "nameEn": "Kabusecha",
+      "type": "Lightly Shaded Green",
+      "description": "Shaded for ten days rather than three weeks, kabusecha sits in the quiet space between sencha and gyokuro. Sweeter than you expect, with a clean finish that lingers without demanding attention. Sourced from a small family farm in Wazuka, Kyoto.",
+      "wagashiName": "Sakura Yokan",
+      "wagashiDescription": "Red bean jelly infused with salt-pickled cherry blossom — delicate, briefly floral",
+      "priceYen": 1100,
+      "featured": false
+    },
+    {
+      "nameJa": "抹茶",
+      "nameEn": "Matcha",
+      "type": "Ceremonial Shade-Grown",
+      "description": "Stone-ground to order from our spring harvest tencha leaves. We prepare it thin (usucha) by default — a clean froth with grass notes and just enough bitterness to feel honest. Ask Haruki for koicha if you have the afternoon.",
+      "wagashiName": "Nerikiri",
+      "wagashiDescription": "Hand-shaped sweet bean paste, formed each morning into the shape of the week's small obsession",
+      "priceYen": 1200,
+      "featured": false
+    },
+    {
+      "nameJa": "春の煎茶",
+      "nameEn": "Haru Sencha",
+      "type": "First-Flush Steamed Green",
+      "description": "The first leaves cut in late April from the lower slope of the garden. Needle-rolled, steamed to a vivid green, brewed cooler than most would guess. Grassy and bright on the nose, settling into a warmth that fills the chest. The most forgiving tea we serve.",
+      "wagashiName": "Kusa Mochi",
+      "wagashiDescription": "Mugwort rice cake filled with sweet red bean — earthy and honest",
+      "priceYen": 800,
+      "featured": false
+    },
+    {
+      "nameJa": "焙じ茶",
+      "nameEn": "Hojicha",
+      "type": "Roasted Green",
+      "description": "Made from older leaves and stems, roasted in a clay pot over high heat until the kitchen fills with smoke. Nothing refined about it. Caramel, toasted grain, a faint char. Low caffeine. The tea you want at the end of a long walk up a mountain path.",
+      "wagashiName": "Kurogoma Daifuku",
+      "wagashiDescription": "Soft mochi filled with black sesame paste — rich, grounding, unhurried",
+      "priceYen": 800,
+      "featured": false
+    }
+  ]
+}

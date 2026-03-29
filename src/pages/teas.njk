@@ -1,0 +1,48 @@
+---
+layout: base.njk
+title: "Our Teas"
+description: "The Spring 2026 seasonal tea menu at Kumo no Chaya. Single-origin gyokuro, kabusecha, matcha, and sencha from our garden and small Uji producers, served with handmade wagashi."
+bodyClass: page-teas
+permalink: /teas/
+---
+
+<section class="teas-header section--sm" aria-labelledby="teas-heading">
+  <div class="container container--prose" style="text-align:center">
+    <span class="page-header__subtitle-label">お茶</span>
+    <h1 class="page-header__title" id="teas-heading">Our Teas</h1>
+    <p class="page-header__intro">Every tea we serve comes from plants we can name, soil we can describe, and hands we have shaken. Our garden produces the gyokuro and matcha. For everything else, we work with two families in Uji who have been growing tea as long as we have been drinking it.</p>
+    <div class="teas-header__season" style="margin-top: var(--space-md)">
+      <span class="season-pill">
+        <span class="season-pill__dot" aria-hidden="true"></span>
+        {{ teas.seasonJa }} {{ teas.season }} {{ teas.year }} Menu
+      </span>
+    </div>
+  </div>
+</section>
+
+<section aria-label="Tea menu" class="section--sm">
+  <div class="tea-list-wrapper">
+    <ul class="tea-list" role="list">
+    {% for tea in teas.teas %}
+      <li class="tea-entry" aria-label="{{ tea.nameEn }}">
+        <div class="tea-entry__header">
+          <span class="tea-entry__name-ja ja" lang="ja">{{ tea.nameJa }}</span>
+          <span class="tea-entry__name-en">{{ tea.nameEn }}</span>
+        </div>
+        <span class="tea-entry__type">{{ tea.type }}</span>
+        <p class="tea-entry__description">{{ tea.description }}</p>
+        <div class="tea-entry__wagashi">
+          <span class="tea-entry__wagashi-label">Paired with</span>
+          <span class="tea-entry__wagashi-name">{{ tea.wagashiName }}</span>
+          <span class="tea-entry__wagashi-desc">— {{ tea.wagashiDescription }}</span>
+        </div>
+        <span class="tea-entry__price">&yen;{{ tea.priceYen }}</span>
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<div class="menu-note" role="note">
+  <p>Our menu changes with the seasons. This page reflects what we are serving now. When the first frost arrives, everything changes.</p>
+</div>
