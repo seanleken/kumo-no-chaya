@@ -2,6 +2,7 @@ export default function(eleventyConfig) {
   // Pass through CSS and assets
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/robots.txt");
 
   // Set input/output dirs
   return {
