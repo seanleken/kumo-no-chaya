@@ -146,8 +146,9 @@
   z-index: 99;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: var(--space-lg);
+  top: 66px;
+  padding-top: 64px;
 }
 
 .site-nav__overlay.is-open {
@@ -167,6 +168,7 @@
 @media (max-width: 640px) {
   .site-nav__links { display: none; }
   .site-nav__toggle { display: block; }
+  .site-nav__overlay .site-nav__links { display: flex; }
 }
 
 
